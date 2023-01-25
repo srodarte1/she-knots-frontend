@@ -1,9 +1,14 @@
 import {Link} from "react-router-dom";
+import Announcement from "./Announcement";
+import HomeBanner from "./HomeBanner";
+import ProductsContainer from "./ProductsContainer";
 
 const Home = () => {
     return(
         <div>
-            <h2> Testing </h2>
+            <Announcement />
+            <HomeBanner />
+            <ProductsContainer />
         </div>
     )
 }

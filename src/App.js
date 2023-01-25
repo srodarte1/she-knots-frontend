@@ -4,13 +4,16 @@ import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import Announcement from "./components/Announcement"
 import HomeBanner from './components/HomeBanner';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Announcement />
-      <HomeBanner />
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+
+      </Routes>
     </div>
   );
 }
