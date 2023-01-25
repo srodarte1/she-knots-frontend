@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.products-container {
+  display: flex;
+  background: white;
+  margin: 0 auto;
+  padding: 5%;
+  width: 75%;
+}
+.image-container {
+  flex: 1.3344;
+}
+
+.scrollable-container {
+  overflow: scroll;
+  color: white;
+  text-decoration: none;
+  flex-direction: row;
+  display: inline;
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 20px;
+  }
+  .scrollableimages {
+    display: inline-block;
+    object-fit: contain;
+    width: 25em;
+    height: 15em;
+    border: 3px solid rgb(255, 255, 255);
+    color: black;
+  }
+img {
+  width: 100%;
+  height:auto;
+  vertical-align: middle;
+}
