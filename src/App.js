@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 import NavBar from "./components/NavBar"
 import Home from "./components/Home"
@@ -8,9 +8,30 @@ import Menu from "./components/Menu"
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
+
+// const [products, setProducts] = useState([])
+
+
+
+// useEffect(() => {
+//   const fetchData = async () => {
+//     try {
+//       const r = await fetch("http://localhost:9292/products")
+//       const data = await r.json()
+//       setProducts(data)
+//     } catch (e) {
+//       alert(e)
+//     }
+//   }
+//   fetchData()
+//   }, [])
+ 
+  
+  
   return (
+    <><NavBar />
     <div className="App">
-      <NavBar />
+      
       <Routes>
         <Route path="/" element={ <Home /> }/>
         <Route path="/Account" element={ <Account /> }/>
@@ -18,6 +39,7 @@ function App() {
         <Route path="/Menu" element={ <Menu /> }/>
       </Routes>
     </div>
+    </>
   );
 }
 

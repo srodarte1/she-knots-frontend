@@ -1,18 +1,31 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import Product from './Product'
 
 const ProductsContainer = () => {
 
-    useEffect(() => {
-    fetch("http://localhost:9292/products")
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch(error => alert(error))
-    },[])
+const [products, setProducts] = useState([])
+
+
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const r = await fetch("http://localhost:9292/products")
+      const data = await r.json()
+      setProducts(data)
+    } catch (e) {
+      alert(e)
+    }
+  }
+  fetchData()
+  }, [])
+
+  const mappedProducts = products.map(product => <Product {...product} key = {product.id} />)
 
     return(
         <div>
-
+            {mappedProducts}
         </div>
     )
 }
