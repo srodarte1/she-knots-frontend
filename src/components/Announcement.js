@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Announcement = () => {
     return(
         <div className='Announcement'>
-            <p>Sign up to recieve 0% off your first order!</p>
+            <p>Click here to visit our Instagram!</p>
         </div>
     )
 }
