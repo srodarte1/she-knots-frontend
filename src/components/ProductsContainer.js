@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Product from './Product'
+import Product from './Product';
 
 const ProductsContainer = () => {
 
@@ -25,7 +25,8 @@ useEffect(() => {
 
     return(
         <div>
-            {mappedProducts}
+          {mappedProducts}
+            
         </div>
     )
 }

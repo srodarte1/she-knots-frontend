@@ -9,22 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
-// const [products, setProducts] = useState([])
 
-
-
-// useEffect(() => {
-//   const fetchData = async () => {
-//     try {
-//       const r = await fetch("http://localhost:9292/products")
-//       const data = await r.json()
-//       setProducts(data)
-//     } catch (e) {
-//       alert(e)
-//     }
-//   }
-//   fetchData()
-//   }, [])
  
   
   
