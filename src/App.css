@@ -1,3 +1,9 @@
+.NavBar{
+  background-color: #282c34;
+  border: 4px pink solid;
+}
+
+
 .App {
   text-align: center;
 }

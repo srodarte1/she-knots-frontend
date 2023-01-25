@@ -1,13 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Home from "./components/Home"
+import NavBar from "./components/NavBar"
+import Announcement from "./components/Announcement"
+import HomeBanner from './components/HomeBanner';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <NavBar />
+      <Announcement />
+      <HomeBanner />
+    </div>
+  );
+}
+
+export default App;
+
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit the <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,9 +30,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */}
