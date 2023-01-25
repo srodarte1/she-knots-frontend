@@ -22,6 +22,7 @@ console.log("hello world")
         <Route path="/Account" element={ <Account /> }/>
         <Route path="/Cart" element={ <Cart /> }/>        
         <Route path="/Menu" element={ <Menu /> }/>
+        
       </Routes>
     </div>
     </>
