@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import Announcement from "./Announcement";
 import HomeBanner from "./HomeBanner";
 import ProductsContainer from "./ProductsContainer";
