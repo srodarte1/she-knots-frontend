@@ -75,3 +75,28 @@ img {
   text-transform: uppercase;
    
 }
+
+.cart-table {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  border: 2px solid forestgreen;
+  width: 800px;
+  height: 300px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}
+
+.cart-title {
+position: center;
+}
