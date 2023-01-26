@@ -8,7 +8,7 @@ import Menu from "./components/Menu"
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
-
+console.log("hello world")
 
  
   
