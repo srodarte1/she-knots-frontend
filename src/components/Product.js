@@ -4,7 +4,7 @@ import React from 'react'
  const Product = ({name, price, description, inventory, front_image, back_image, discount}) => {
   return (
     <>
-    <div classNmae="products-container">
+    <div className="products-container">
       <span className="scrollable-container">
       
       <h3>{name}</h3>

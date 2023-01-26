@@ -10,15 +10,9 @@ const NavBar = () => {
             <Link to= "/" className="site-title">She Knots</Link>
             <ul>
                 <CustomLink to="/Menu">Menu</CustomLink>
-                <CustomLink to="/Account">Account</CustomLink>
+                <CustomLink to="/LoginPage">Login</CustomLink>
                 <CustomLink to="/Cart">Cart</CustomLink>
             </ul>
-
-            {/* <a className="menuButton" onClick={handleLinkClick} href="/Menu">Menu</a>
-            <a className="homePageButton" onClick={handleLinkClick} href="/HomeLogo">HomeLogo</a>
-            <a className="searchButton" onClick={handleLinkClick} href="/Search">Search</a>
-            <a className="accountButton" onClick={handleLinkClick} href="/Account">Account</a>
-            <a className="cartButton" onClick={handleLinkClick} href="/Cart">Cart</a> */}
         </nav>
     )
 }
