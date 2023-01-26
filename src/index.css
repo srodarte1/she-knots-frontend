@@ -45,3 +45,33 @@ img {
   height:auto;
   vertical-align: middle;
 }
+.some-knots {
+  position: absolute;
+  background-size: 100%;
+  display: flex;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: cover;
+  display: inline-block;
+    
+    width: 10em;
+    height: 15em;
+    border: 3px solid rgb(255, 255, 255);
+    color: black;
+}
+.form-container {
+ display: center;
+
+    background-size: fill;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* font-size: 1.5rem; */
+  padding: 1rem 3rem;
+  color:black;
+  text-transform: uppercase;
+   
+}
