@@ -12,6 +12,7 @@ const NavBar = () => {
                 <CustomLink to="/Menu">Menu</CustomLink>
                 <CustomLink to="/usersignin">Login</CustomLink>
                 <CustomLink to="/Cart">Cart</CustomLink>
+                {/* add a login or out button conditional to whether a user is signed in or out */}
             </ul>
         </nav>
     )

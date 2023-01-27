@@ -11,14 +11,17 @@ import {useState} from 'react'
 function App() {
 
   const [user, setUser] = useState(null)
+  const [message, setMessage] = useState(null)
 
   return (
-    <><NavBar />
+    <>
+    <p>{message}</p>
+    <NavBar />
     <div className="App">
       
       <Routes>
         <Route path="/" element={ <Home /> }/>
-        <Route path="/usersignin" element={ <UserSignin user={ user } setUser={ setUser }/> }/>
+        <Route path="/usersignin" element={ <UserSignin user={ user } setUser={ setUser } setMessage={setMessage}/> }/>
         <Route path="/cart" element={ <Cart /> }/>        
         <Route path="/menu" element={ <Menu /> }/>
       </Routes>

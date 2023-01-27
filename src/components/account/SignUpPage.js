@@ -27,9 +27,26 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        return navigateHome("/")
-    }
+      e.preventDefault()
+      // console.log(user)
+      fetch("http://localhost:9292/signup",{
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+      })
+      .then(resp => {
+          if (resp.ok) {
+              resp.json().then(userObj => {
+                setUser(userObj.user)
+                setMessage("User successfully logged in!")
+                navigateHome("/")
+              })
+          } else {
+              resp.json().then(messageObj => setMessage(messageObj.message))
+          }})
+  }
 
   return (
     <CssVarsProvider>
@@ -60,7 +77,7 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Username</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="username"
                 type="username"
                 placeholder="johndoe"
@@ -72,7 +89,7 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Email</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="email"
                 type="email"
                 placeholder="johndoe@email.com"
@@ -84,7 +101,7 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Password</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="password"
                 type="password"
                 placeholder="password"
@@ -96,7 +113,7 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Password Confirmation</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="password_confirmation"
                 type="password"
                 placeholder="password"
@@ -105,10 +122,10 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
                 />
             </FormControl>
 
-            <Button type="submit" onSubmit={handleSubmit} sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
+            <Button type="submit" sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
             </form>
           <Typography
-            endDecorator={<Link href="/usersignin" onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign in</Link>}
+            endDecorator={<Link onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign in</Link>}
             fontSize="sm"
             sx={{ alignSelf: 'center' }}
           >

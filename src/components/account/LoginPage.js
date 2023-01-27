@@ -27,7 +27,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(user)
-        fetch("http://localhost:9393/login",{
+        fetch("http://localhost:9292/login",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Email</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="email"
                 type="email"
                 placeholder="johndoe@email.com"
@@ -88,7 +88,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
                 <FormLabel>Password</FormLabel>
                 <Input
                 // html input attribute
-                required="true"
+                required
                 name="password"
                 type="password"
                 placeholder="password"
@@ -100,7 +100,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
             <Button type="submit" onSubmit={handleSubmit} sx={{ mt: 1 /* margin top */ }}>Log in</Button>
             </form>
           <Typography
-            endDecorator={<Link href="/SignUpPage" onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign up</Link>}
+            endDecorator={<Link onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign up</Link>}
             fontSize="sm"
             sx={{ alignSelf: 'center' }}
           >
