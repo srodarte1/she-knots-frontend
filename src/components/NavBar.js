@@ -10,7 +10,7 @@ const NavBar = () => {
             <Link to= "/" className="site-title">She Knots</Link>
             <ul>
                 <CustomLink to="/Menu">Menu</CustomLink>
-                <CustomLink to="/LoginPage">Login</CustomLink>
+                <CustomLink to="/usersignin">Login</CustomLink>
                 <CustomLink to="/Cart">Cart</CustomLink>
             </ul>
         </nav>

@@ -108,7 +108,7 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
             <Button type="submit" onSubmit={handleSubmit} sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
             </form>
           <Typography
-            endDecorator={<Link href="/LoginPage" onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign in</Link>}
+            endDecorator={<Link href="/usersignin" onClick={() => setToggleAuth(currentVal => !currentVal)}>Sign in</Link>}
             fontSize="sm"
             sx={{ alignSelf: 'center' }}
           >
