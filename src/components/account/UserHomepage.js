@@ -5,14 +5,14 @@ const UserHomepage = ({user, setUser}) => {
     console.log(user.email)
 
     const [showForm, setShowForm] = useState(false);
-    const [currentUser, setCurrentUser] = useState([])
+    const [updatedUser, setUpdatedUser] = useState([])
     
     useEffect(() => {
         const fetchData = async () => {
           try {
             const resp = await fetch("http://localhost:9292/users")
             const data = await resp.json()
-            setCurrentUser(currentUser)
+            setUpdatedUser(data)
             console.log(data)
           } catch (error) {
             alert(error)
@@ -21,6 +21,12 @@ const UserHomepage = ({user, setUser}) => {
       fetchData()
       }, []);
 
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        setUpdatedUser({...updatedUser, [name]: value})
+        console.log(e)
+
+    }
 
 
     return (
@@ -38,10 +44,10 @@ const UserHomepage = ({user, setUser}) => {
             <Link>Manage Account</Link> <br/>
             
             <form>
-            <input className="user-input"  type="text" placeholder="First Name" name="first-name"  required /> <br />
-            <input className="user-input"  type="text" placeholder="Last" name="first-name"  required /> <br />
-            <input className="user-input"  type="text" placeholder="Address" name="first-name"  required /> <br />
-            <input className="user-input"  type="text" placeholder="Phone Number" name="first-name"  required /> <br />
+            <input className="user-input" onChange= {handleChange} value= {updatedUser.first_name} type="text" placeholder="First Name" name="first-name"  required /> <br />
+            <input className="user-input" onChange= {handleChange} value= {updatedUser.last_name} type="text" placeholder="Last" name="last-name"  required /> <br />
+            <input className="user-input" onChange= {handleChange} value= {updatedUser.address} type="text" placeholder="Address" name="address"  required /> <br />
+            <input className="user-input" onChange= {handleChange} value= {updatedUser.phone_number} type="text" placeholder="Phone Number" name="phone-number"  required /> <br />
             <button type="submit" >Update</button> <br/>
             <Link>Remove Account</Link>
             <br/>

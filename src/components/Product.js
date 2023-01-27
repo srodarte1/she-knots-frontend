@@ -6,13 +6,13 @@ import React from 'react'
     <>
     <div className="products-container">
       <span className="scrollable-container">
-      
-      <h3>{name}</h3>
-      <p>{price}</p>
+      <img className="scrollableimages" src={front_image} alt={name}/>
+      <h1>{name}</h1>
+      <h3>{price}</h3>
       <p>{description}</p>
       <p>{inventory}</p>
       <div className="image-container">
-      <img className="scrollableimages" src={front_image} alt={name}/>
+      
       </div>
       <p>{discount}</p>
       </span>

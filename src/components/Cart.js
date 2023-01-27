@@ -1,30 +1,20 @@
+import { useNavigate } from 'react-router-dom';
+
 const Cart = () => {
+  
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/')
+  }
+
     return(
-        <div className="cart-table">
-            <table>
-            <h2 className="cart-title">Your Cart [0]</h2>
-        <tr>
-          <th>Item</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-        </tr>
-        <tr>
-          <td>Anom</td>
-          <td>19</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Megha</td>
-          <td>19</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Subham</td>
-          <td>25</td>
-          <td>Male</td>
-        </tr>
-      </table>
+        <div>
+          <img className="cart-logo" src="https://foodhub.vn/assets/images/no-cart.png" alt="cart"/>
+          <h2 className="cart-title">Oops! Your Cart is Empty?</h2>
+          <h3>Looks like you haven't anything yet to your car</h3>
+          <button onClick= {handleClick}className="continue-shopping">Shop Now</button>
+        
             
         </div>
     )
