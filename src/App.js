@@ -2,26 +2,28 @@ import React from 'react'
 import './App.css';
 import NavBar from "./components/NavBar"
 import Home from "./components/Home"
-import Account from "./components/Account"
 import Cart from "./components/Cart"
 import Menu from "./components/Menu"
 import { Route, Routes } from 'react-router-dom';
+import UserSignin from './components/account/UserSignin';
+import {useState} from 'react'
 
 function App() {
-console.log("hello world")
 
- 
-  
-  
+  const [user, setUser] = useState(null)
+  const [message, setMessage] = useState(null)
+
   return (
-    <><NavBar />
+    <>
+    <p>{message}</p>
+    <NavBar />
     <div className="App">
       
       <Routes>
         <Route path="/" element={ <Home /> }/>
-        <Route path="/Account" element={ <Account /> }/>
-        <Route path="/Cart" element={ <Cart /> }/>        
-        <Route path="/Menu" element={ <Menu /> }/>
+        <Route path="/usersignin" element={ <UserSignin user={ user } setUser={ setUser } setMessage={setMessage}/> }/>
+        <Route path="/cart" element={ <Cart /> }/>        
+        <Route path="/menu" element={ <Menu /> }/>
       </Routes>
     </div>
     </>
