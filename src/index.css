@@ -100,3 +100,10 @@ td {
 .cart-title {
 position: center;
 }
+
+.user-logo {
+
+  size: 5%;
+  width: 10%;
+  height: 20%;
+}
