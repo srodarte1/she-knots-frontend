@@ -28,7 +28,7 @@ code {
 .scrollable-container {
   overflow: scroll;
   align-items: center;
- 
+  color: rgb(128, 126, 126);
   text-decoration: none;
   flex-direction: row;
   display: inline;
@@ -135,15 +135,22 @@ margin-left: 0;
 float: left;
 }
 
-     .links{
-        text-decoration: none;
-        color: #8f8f8f;
-        font-size: 24px;
-        font-weight: 400;
-        position: relative;
-        text-transform: uppercase;
-      }
-
+.links{
+text-decoration: none;
+color: #8f8f8f;
+font-size: 24px;
+font-weight: 400;
+position: relative;
+text-transform: uppercase;
+}
+.links:hover{
+  color: lightblue;
+  font-style: underline;
+}
+.knot-links:hover{
+  color:lightblue;
+  font-style: underline;
+}
        
 
        
@@ -202,12 +209,13 @@ float: left;
 .fa {
   padding: 20px;
   font-size: 30px;
+  color: rgb(49, 48, 48);
   width: 50px;
   text-align: center;
   text-decoration: none;
 }
 .fa:hover {
-  color: grey;
+  color: lightblue;
 }
 
 
