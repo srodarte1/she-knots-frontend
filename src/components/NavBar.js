@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return(
         <nav className='nav-bar'>
-            <Link  to= "/" className="links">She Knots</Link>
+            <Link  to= "/" className="knot-links">She Knots</Link>
             <ul className="menuItems">
                 <CustomLink className="links" to="/Menu">Menu</CustomLink>
                 <CustomLink className="links" to="/usersignin">Login</CustomLink>

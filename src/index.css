@@ -28,7 +28,7 @@ code {
 .scrollable-container {
   overflow: scroll;
   align-items: center;
-  
+ 
   text-decoration: none;
   flex-direction: row;
   display: inline;
@@ -36,7 +36,7 @@ code {
   display: absolute;
   padding: 10px;
   text-align: center;
-  border: grey solid 2px;
+  border: lightgray solid 2px;
   border-radius: 1rem;
   /* padding: 1px; */
   /* width: 10rem;  */
@@ -109,14 +109,30 @@ position: center;
   margin: 25px;
   background: #f9f9f9;
   padding: 16px;
+  
 }
 
 .menuItems {
     list-style: none;
     display: flex;
 }
+.knot-links {
+  margin: 50px;
+}
+.knot-links {
+  text-decoration: none;
+        color: #8f8f8f;
+        font-size: 24px;
+        font-weight: 400;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+}
 .links {
-margin: 50px;
+margin: 20px;
+margin-left: auto;
+margin-left: 0;
+float: left;
 }
 
      .links{
@@ -124,30 +140,14 @@ margin: 50px;
         color: #8f8f8f;
         font-size: 24px;
         font-weight: 400;
-        transition: all 0.5s ease-in-out;
         position: relative;
         text-transform: uppercase;
       }
 
-        .links::before {
-          content: attr(data-item);
-          transition: 0.5s;
-          color: #8254ff;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 0;
-          overflow: hidden;
-        }
+       
 
        
-          .links::before {
-            width: 100%;
-            transition: all 0.5s ease-in-out;
           
-        }
 
 .cart-logo {
   size: 5%;
@@ -199,6 +199,18 @@ margin: 50px;
 * {
   font-family: "Roboto", sans-serif;
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  color: grey;
+}
+
+
 
 
 
