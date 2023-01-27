@@ -6,12 +6,12 @@ const NavBar = () => {
   
 
     return(
-        <nav className='NavBar'>
-            <Link to= "/" className="site-title">She Knots</Link>
-            <ul>
-                <CustomLink to="/Menu">Menu</CustomLink>
-                <CustomLink to="/usersignin">Login</CustomLink>
-                <CustomLink to="/Cart">Cart</CustomLink>
+        <nav className='nav-bar'>
+            <Link  to= "/" className="knot-links">She Knots</Link>
+            <ul className="menuItems">
+                <CustomLink className="links" to="/Menu">Menu</CustomLink>
+                <CustomLink className="links" to="/usersignin">Login</CustomLink>
+                <CustomLink className="links" to="/Cart">Cart</CustomLink>
                 {/* add a login or out button conditional to whether a user is signed in or out */}
             </ul>
         </nav>

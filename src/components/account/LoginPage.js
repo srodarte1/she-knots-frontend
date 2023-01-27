@@ -44,7 +44,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
                 resp.json().then(messageObj => setMessage(messageObj.message))
             }
         })
-        return navigateHome("/")
+        return navigateHome("/usersignin")
     }
 
   return (
