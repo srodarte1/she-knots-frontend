@@ -1,11 +1,11 @@
 //want to remove upper and lower padding so NavBar is flush with the upper and lower contents
 
 const Announcement = () => {
-    return(
-        <div className='Announcement'>
-            <p>Click here to visit our Instagram!</p>
-        </div>
-    )
-}
+  return (
+    <div className="btn__container">
+  
+    </div>
+  );
+};
 
-export default Announcement
+export default Announcement;
