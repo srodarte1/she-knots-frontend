@@ -5,6 +5,7 @@ import UserHomepage from './UserHomepage'
 
 const UserSignin = ({user, setUser, setMessage}) => {
     const [toggleAuth, setToggleAuth] = useState(false)
+    const [toggleLogout, setLogout] = useState(false)
 
     if (!user) {
         return (toggleAuth && <LoginPage setMessage={setMessage} setUser={setUser} setToggleAuth={setToggleAuth} />)||(<SignUpPage setMessage={setMessage} setUser={setUser} setToggleAuth={setToggleAuth} />)
