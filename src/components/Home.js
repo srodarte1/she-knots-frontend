@@ -1,6 +1,7 @@
 import Announcement from "./Announcement";
 import HomeBanner from "./HomeBanner";
 import ProductsContainer from "./ProductsContainer";
+import ProductForm from "./ProductForm";
 
 const Home = () => {
     return(
@@ -8,6 +9,7 @@ const Home = () => {
             <Announcement />
             <HomeBanner />
             <ProductsContainer />
+            <ProductForm />
         </div>
     )
 }
