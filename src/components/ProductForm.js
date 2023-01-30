@@ -1,75 +1,51 @@
 import React, { useState } from 'react'
 
-const ProductForm = () => {
+const ProductForm = ({setProducts}) => {
     
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
-    const [quantity, setQuantity] = useState('');
+    const [inventory, setInventory] = useState('');
     const [frontImage, setFrontImage] = useState('');
     const [backImage, setBackImage] = useState('');
-    const [products, setProducts] = useState('');
 
     const handleChange = (e) => {
         const {name, value} = e.target
-        setName({...name, [name]: value})
-        setPrice({...price, [name]: value})
-        setDescription({...description, [name]: value})
-        setQuantity({...quantity, [name]: value})
-        setFrontImage({...frontImage, [name]: value})
-        setBackImage({...backImage, [name]: value})
-        setProducts({...products, [name]: value})
+        if(name === 'name') setName(value)
+        if(name === 'price') setPrice(value)
+        if(name === 'description') setDescription(value)
+        if(name === 'inventory') setInventory(value)
+        if(name === 'front_image') setFrontImage(value)
+        if(name === 'back_image') setBackImage(value)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        debugger
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('price', price);
+        formData.append('description', description);
+        formData.append('inventory', inventory);
+        formData.append('front_image', frontImage);
+        formData.append('back_image', backImage);
         fetch('http://localhost:9292/products', {
         method: 'POST',
-        body: JSON.stringify({
-            name,
-            price,
-            description,
-            quantity,
-            frontImage,
-            backImage
-        }),
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        body: formData,
         }).then((response) => {
-        if (response.ok) {
-            setName('');
-            setPrice('');
-            setDescription('');
-            setQuantity('');
-            setFrontImage('');
-            setBackImage('');
-            setProducts(products);
+        if (response.status === 201) {
+            response.json()
+            .then((newProductObj) => {
+                setName('');
+                setPrice('');
+                setDescription('');
+                setInventory('');
+                setFrontImage('');
+                setBackImage('');
+                setProducts(currentProducts => [...currentProducts, newProductObj.product]);
+            })
         } 
         });
     };
-    
-    // const [response, setResponse] = useState(null)
-
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault()
-
-    //     try {
-    //         const res = await fetch('http://localhost:9292/product', {
-    //             method: 'POST',
-    //             body: JSON.stringify({key: 'value'}),
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         })
-    //         const json = await res.json()
-    //         setResponse(json)
-    //     }   catch (error) {
-    //         console.error(error)
-    //     }
-    // }
-
 
     return (
         <div>
@@ -77,11 +53,12 @@ const ProductForm = () => {
                 <input id="name" name="name" value={name} type="text" placeholder="Product name..." onChange={handleChange} /><br />
                 <input id="price" name="price" value={price} type="number" placeholder="Price" onChange={handleChange} /><br />
                 <input id="description" name="description" value={description} type="text" placeholder="Description" onChange={handleChange} /><br />
-                <input id="quantity" name="quantity" value={quantity} type="number" placeholder="Quantity" onChange={handleChange} /><br />
-                <input id="front_image" name="front_image" value={frontImage} type="file" onChange={handleChange} /><br />
-                <input id="back_image" name="back_image" value={backImage} type="file" onChange={handleChange} /><br />
+                <input id="inventory" name="inventory" value={inventory} type="number" placeholder="Inventory" onChange={handleChange} /><br />
+                <input id="front_image" name="front_image" value={frontImage} type="text" placeholder="URL of front image" onChange={handleChange} /><br />
+                {/* https://i.imgur.com/VvWgntu.png */}
+                <input id="back_image" name="back_image" value={backImage} type="text" placeholder="URL of back image" onChange={handleChange} /><br />
+                {/* https://i.imgur.com/mJejCWD.png */}
                 <button id="submit" type="submit">Submit new product.</button>
-                {/* discount? */}
             </form>
         </div>
     )
