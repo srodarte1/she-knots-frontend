@@ -10,7 +10,7 @@ const UserSignin = ({user, setUser, setMessage}) => {
     if (!user) {
         return (toggleAuth && <LoginPage setMessage={setMessage} setUser={setUser} setToggleAuth={setToggleAuth} />)||(<SignUpPage setMessage={setMessage} setUser={setUser} setToggleAuth={setToggleAuth} />)
     }
-
+    console.log("This is user in Usersignin" + user)
     return(
         <div>
             <UserHomepage user={user} setUser={setUser}/>

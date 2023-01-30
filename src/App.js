@@ -12,8 +12,9 @@ function App() {
 
   const [user, setUser] = useState(null)
   const [message, setMessage] = useState(null)
-
+  console.log("this is setUser" + setUser)
   return (
+    
     <>
     <p>{message}</p>
     <NavBar />

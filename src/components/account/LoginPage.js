@@ -27,6 +27,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(user)
+    
         fetch("http://localhost:9292/login",{
             method: "POST",
             headers: {
