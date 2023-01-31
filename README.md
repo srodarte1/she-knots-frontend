@@ -1,4 +1,4 @@
-# Welcome to the She Knots Marketplace!
+# Welcome to She Knots! The go-to store for handmade plant hanging needs.
 
 > To view in VSCode, right click on the README.md file and select "Open Preview".
 
@@ -6,38 +6,38 @@
 
 ### To get started:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Ensure that you have both the frontend (she-knots-frontend) and the backend (sheknots) files downloaded
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Run <span style="color:#FF00FF">json-server --watch db.json</span>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.In a separate terminal, run <span style="color:#FF00FF">npm install</span>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.In the same second terminal <span style="color:#FF00FF">npm start</span>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-When prompted if you would like to start a server on another port press the <span style="color:#FF00FF">y</span> key  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.When you're done, close both servers by pressing <span style="color:#FF00FF">Ctrl+C</span> on both terminals.
+The link for the repository for the front-end is here: [https://github.com/srodarte1/she-knots-frontend](https://github.com/srodarte1/she-knots-frontend)
 
-Make sure to open
-[http://localhost:3000/western_zodiac](http://localhost:3000/western_zodiac) in the browser to verify that your backend is working before you proceed!
+The link for the repository for the back-end is here: [https://github.com/adrianbarba123/sheknots](https://github.com/adrianbarba123/sheknots)
 
-## Zodiac Journal
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Ensure that you have both the frontend (she-knots-frontend) and the backend (sheknots) files downloaded<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.In the sheknots backend directory, run the command: <span style="color:#FF00FF">bundle install</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.Once that command finishes running, in the same terminal, run the command: <span style="color:#FF00FF">rake server</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Now open a second terminal and navigate to the frontend (she-knots-frontend)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.In this second terminal run the command: <span style="color:#FF00FF">npm install</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.Once the terminal finishes it's processes, run the command: <span style="color:#FF00FF">npm start</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.The website should open onto your browser automatically. If not, you can navigate to the page by entering the address where the frontend server has started. By default, this is: [http://localhost:3000/](http://localhost:3000/)<br>
 
-is an interactive website created with the intention of being able to log how you are feeling and being able to keep your zodiac sign and traits & attributes in mind while doing so. General zodiac information comes from the Zodiac Signs API that was retieved [here](https://github.com/gnappo1/json-server-collection/blob/main/zodiac-signs/db.json) and stored locally for easy access and manipulation.
+## What is it:
 
-## Zodiac Journal
+is an online store where users can sign up and sign in, and purchase custom, hand-made plant hangers directly from the creator. Customers are only required to provide an e-mail and password to sign up, but once signed up are able to manage their account to be able to update their first and last names, address, and phone number and have the ability to delete their account if desired. The admins of the page are able to keep the website up to date by adding new products whenever they are available through filling out a simple form. All the data for the products is real data coming from a real store.
 
-is a representation of what can be done when working with languages: _React_ using _React Router v.6_, _JavaScript_, _HTML_, and _CSS_ <!-- with some _Bootstrap_ -->. This web-based application utilizes several tools and features from these languages including _array interation_, _filtering_, _DOM/Server communication_, _routing_, and more.
+## The Tools Used:
 
-![Gif of our project](/images/ezgif.com-gif-maker.gif)
+is a representation of what can be done when working with languages: _React_ and _Ruby_ using _Active Record_, _Sinatra_, _JavaScript_, _HTML_, and _CSS_. This web-based application utilizes several tools and features from these languages including _associations_, _relationships_, _DOM/Server communication_, _routing_, _user authentication_ and more.
 
-When users of this application initially open the website they are greeted with a serene, welcoming homepage with all 12 zodiac signs listed to the left of the screen. Users can then scroll down to their zodiac and click on it to expand the information on the screen before mobing onto journaling. The links on the top left of the screen are used to navigate throughout the application to return to return to the home screen, move onto journaling, or view their own user-created journal entries.
+<!-- Insert GIF -->
 
-For more information on what is included in the Zodiac Signs API please visit the github repository [here](https://github.com/gnappo1/json-server-collection/tree/main/zodiac-signs) or contact the developers listed below.
+When users open up the application they are greeted by the home page which displays a navigation bar, the store banner, and then all of the products we have available listed below. In the NavBar, the user can then elect to sign in or sign up, they will then be introduced to a login form that is changable to a sign in form if the user does not already have an account, and vice-versa. For account creation to work, the user must meet certain account creation requirements. Once those requirements are met, the new users data is stored within our Ruby database and passwords go through a process with _bcrypt_ and _dotenv_ where their passwords are salted and hashed, making it much more difficult for unauthorized users to gain acess to their account information.
 
-## The Zodiac Project
+## The She Knots webstore
 
-was created by Flatiron School students Sarah Rodarte and Adrian Barba for their Flatiron School of Software Engineering: Phase-3 project assignment.
+is an ongoing project created by Flatiron School students Sarah Rodarte and Adrian Barba for their Flatiron School of Software Engineering: Phase-3 project assignment.
 
 ## License
 
 MIT License
-Copyright (c) 2023 jccaropino7786
+Copyright (c) 2023 adrianbarba123
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
