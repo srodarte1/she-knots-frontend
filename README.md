@@ -6,6 +6,10 @@
 
 ### To get started:
 
+The link for the repository for the front-end is here: [https://github.com/srodarte1/she-knots-frontend](https://github.com/srodarte1/she-knots-frontend)
+
+The link for the repository for the back-end is here: [https://github.com/adrianbarba123/sheknots](https://github.com/adrianbarba123/sheknots)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Ensure that you have both the frontend (she-knots-frontend) and the backend (sheknots) files downloaded<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.In the sheknots backend directory, run the command: <span style="color:#FF00FF">bundle install</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.Once that command finishes running, in the same terminal, run the command: <span style="color:#FF00FF">rake server</span><br>
